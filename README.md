@@ -1,1 +1,1 @@
-# transient_rates_from_cosmological_simulations
+# Estimating Cosmic Transients from Cosmological Simulations and BPASS
