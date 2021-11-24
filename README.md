@@ -40,19 +40,56 @@ Additional SFH parameters are:
 - `h`:              Hubble parameter
 - `omega_M`:        cosmological mass density
 - `omega_L`:        effective mass density of dark energy 
+
 And are accessible through `f['SFH'].attrs['h']`
+
 
 Per SFH the redshift locations are stored in the attributes of the dataset: `f['SFH/TNG'].attrs['redshift']`
 
 
-### Raw SFH data
+### Raw SFH data [raw_SFH]
 
-This is a more finely binned star formation rate over metallicity and redshift. 
+This is a more finely binned star formation rate over metallicity and redshift. Instead of 13 BPASS metallicities there are 100 metallicity bins and the mean, median and 16%-84% interval is recorded.
+
+The group contains the following structure with each SFH containing the same datasets. The `distribution` is normalised to the cosmology used in the paper.
+
+- empirical
+  - `distribution` : The binned SFR distribution over redshift and metallicity (100x500)
+  - `mean`: The SFR-weighted mean metallicity over redshift (500)
+  - `median`: The SFR-weighted median metallicity over redshift (500)
+  - `16p`: 16% of the SFR-weighted metallicity distribution over redshift (500)
+  - `84p`: 84% of the SFR-weighted metallicity distribution over redshift (500)
+- millimillennium (100x64)
+- TNG (100x100)
+- EAGLE (100x29)
+
+The following attributes are available per SFH:
+- `metallicity_edges`
+- `redshift`
+
+Axxessible using `f['raw_SFH/TNG'].attrs['metallicity_edges']` for each SFH.
+
+### Predicted event rates [event_rates]
+
+The predicted event rates are created by combining the cosmic SFH with BPASS DTDs, as described in this notebook.
+This group contains the predicted rates for each event type per BPASS metallicity. Each simulation contains predicted rates for all event types mentioned in the DTD section on this page. 
+
+- empirical
+  - BBH (13x100) 
+  - BHNS (13x100)
+  - etc
+- millimennium  (13x100)
+- TNG           (13x100)
+- EAGLE         (13x100)
+
+The following attributes can be accessed per SFH:
+- `event_lookbacktime`: The lookback time bin edges of the calculated rates
+- `event_redshift`:     The redshift bin edges of the calculated rates
+- `h`:                  Hubble parameter
+- `omega_M`:            cosmological mass density 
+- `omega_L`:            effective mass density of dark energy
+
+While `event_redshift` and `event_lookbacktime` are accessible per SFH, they are the same for each SFH.
 
 
-- Binned in 100 metallicity bins 
-
-
-Predicted event rates
-
-Observations
+### Observations
