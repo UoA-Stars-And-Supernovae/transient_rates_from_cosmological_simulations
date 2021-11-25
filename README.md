@@ -92,4 +92,27 @@ The following attributes can be accessed per SFH:
 While `event_redshift` and `event_lookbacktime` are accessible per SFH, they are the same for each SFH.
 
 
-### Observations
+### Observations [observations]
+
+The raw observations can be found ![here](), but the are also available within the HDF5 file.
+It's important to note that the cosmology has not been applied yet! 
+
+The structure of this section in the HDF5 file is: 
+
+- `Ia`
+  - `mean_z`
+  - `lower_z`
+  - `upper_z`
+  - `rate`
+  - `lower_rate`
+  - `upper_rate`
+- `CCSN`
+- `SESN`
+- `II`
+- `LGRB` (normalised using the geometric parameters and lighcurve correction as mentioned in the paper)
+- `PISN`
+- `BBH`
+- `BHNS`
+- `BNS`
+
+The compact object groups also contain a `data_description` attribute, which describes which models are at which index, and can be accessed like `f['observations/BBH'].attrs['data_description']`.
