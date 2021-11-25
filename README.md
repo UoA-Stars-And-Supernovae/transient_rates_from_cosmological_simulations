@@ -10,6 +10,12 @@ The following data are available in the HDF5 file with the key within the file i
 ### Delay Time Distributions [DTD]
 This group contains the following keys related to the event types.
 - BBH
+  - `zem5`
+  - `zem4`
+  - `z001`
+  - `z002`
+  - `z003`
+  - etc (see below) 
 - BHNS
 - BNS
 - Type Ia
