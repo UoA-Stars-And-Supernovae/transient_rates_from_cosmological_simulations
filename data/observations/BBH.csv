@@ -1,0 +1,8 @@
+﻿Name,Z_bin,Rate,-Stat,+Stat,-System,+System,Notes
+theligoscientificcollaboration_2021,0,79.86,-22.36,31.94,0,0,PDB (pair) model
+theligoscientificcollaboration_2021,0,70.28,-19.17,28.75,0,0,PDB (ind) model
+theligoscientificcollaboration_2021,0,134.17,-63.89,281.11,0,0,MS model
+theligoscientificcollaboration_2021,0,105.42,-31.94,51.11,0,0,BGP model
+theligoscientificcollaboration_2021,0.2,89.76,-31.94,47.28,0,0,PP model
+theligoscientificcollaboration_2021,0.2,83.05,-27.79,36.74,0,0,FM model
+theligoscientificcollaboration_2021,0.2,102.22,-30.67,44.72,0,0,PS model
