@@ -104,7 +104,7 @@ While `event_redshift` and `event_lookbacktime` are accessible per SFH, they are
 
 ### Observations [observations]
 
-The raw observations can be found ![here](), but the are also available within the HDF5 file.
+The raw observations can be found ![here](https://github.com/UoA-Stars-And-Supernovae/transient_rates_from_cosmological_simulations/tree/main/data/observations), but the are also available within the HDF5 file.
 It's important to note that the cosmology has not been applied yet! 
 
 The structure of this section in the HDF5 file is: 
